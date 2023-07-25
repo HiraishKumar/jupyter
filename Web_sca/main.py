@@ -23,14 +23,14 @@ def downer(site,write_path):
     except requests.exceptions.RequestException as error:
         print(f'Error: {error}')
 
-downer('https://en.wikipedia.org/wiki/Gun','jupyter\Web_sca\output.html')
+downer('https://www.flipkart.com/search?q=laptop%203060&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off','jupyter\Web_sca\output.html')
 
 @timer
 def finder(read_path,write_path,to_find):
     with open(read_path,'r',encoding='utf-8') as read_file:
         content=read_file.read()
     with open(write_path,'w',encoding='utf-8') as write_file:
-        write_file.write(str(BeautifulSoup(content,'lxml').find_all(to_find)))
+        write_file.write(str(BeautifulSoup(content,'lxml').find_all('div', class_=to_find)))
     print('Executed withour Error') 
 
-finder('jupyter\Web_sca\output.html',r'jupyter\Web_sca\found.html','ul')
+finder('jupyter\Web_sca\output.html',r'jupyter\Web_sca\found.html','_30jeq3 _1_WHN1')
