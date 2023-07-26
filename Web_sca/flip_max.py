@@ -45,6 +45,6 @@ while i < 2:
     if url is None:
         print("No more pages to scrape.")
         break
-    csv_writer(BeautifulSoup(requests.get(url).text, 'lxml').find_all('div', class_="_13oc-S"))    
+    csv_writer(data.find_all('div', class_="_13oc-S"))    
     i += 1
     time.sleep(0.5)  # Adding a delay to avoid aggressive scraping and rate limiting
