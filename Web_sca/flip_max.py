@@ -47,4 +47,4 @@ while i < 2:
         break
     csv_writer(data.find_all('div', class_="_13oc-S"))    
     i += 1
-    time.sleep(0.5)  # Adding a delay to avoid aggressive scraping and rate limiting
+    time.sleep(2)  # Adding a delay to avoid aggressive scraping and rate limiting
