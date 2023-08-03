@@ -1,0 +1,1056 @@
+﻿
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta name="facebook-domain-verification" content="yzh643ss157ikua8jol8s2ovuuw1rg" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><title>
+	Virtual University of Pakistan
+</title>
+
+    <script type="text/javascript" src="Scripts/jquery-1.9.0.min.js" language="javascript"></script>
+    <script type='text/javascript' src='Scripts/jquery.min.js'></script>
+    <script type='text/javascript' src='Scripts/jquery.easing.1.3.js'></script>
+
+    <!-- Global site tag (gtag.js) - Google Ads: AW-1013982492 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-1013982492"></script>
+    <script> window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'AW-1013982492'); </script>
+
+    <!-- Meta Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '782031012916059');
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display: none"
+            src="https://www.facebook.com/tr?id=782031012916059&ev=PageView&noscript=1" />
+    </noscript>
+    <!-- End Meta Pixel Code -->
+
+
+    <script type="text/javascript" language="javascript">
+        jQuery(function () {
+            var mainslider;
+            jQuery('#main-slider').flexslider({
+                animation: "slide",
+                animationSpeed: 1300,               
+                start: function (slider) {
+                    mainslider = slider;
+                    ResizeFooterHeight();
+                },                 
+            });
+
+            $(document).ready(function () {               
+                ResizeFooterHeight();
+            });
+            $(window).on("resize", function () {
+              
+                mainslider.update(mainslider.pagingCount);
+                mainslider.newSlides.width(mainslider.computedW);
+                mainslider.setProps(mainslider.computedW, "setTotal");
+
+                ResizeFooterHeight();
+            });
+
+            function sleep(milliseconds) {
+                //alert('slept');
+                var start = new Date().getTime();
+                for (var i = 0; i < 1e7; i++) {
+                    if ((new Date().getTime() - start) > milliseconds) {
+                        break;
+                    }
+                }
+            }
+
+        });
+        function OpenWindow(url) {
+            var win = window.open(url, 'NewsDetails', 'width=500,height=500,toolbar=no,resizable=1,scrollbars=1');
+            win.focus();
+        }
+
+        function OpenInNewTab(url) {
+            var win = window.open(url, '_blank');
+            win.focus();
+        }
+    </script>
+  
+    <script type="text/javascript" language="javascript">
+        function pageWidth() {
+            return window.innerWidth != null ? window.innerWidth : document.documentElement && document.documentElement.clientWidth ? document.documentElement.clientWidth : document.body != null ? document.body.clientWidth : null;
+        }
+        $(document).ready(function () {
+
+            $("#content").find("[id^='tab']").hide(); // Hide all content
+            $("#tabs li:first").attr("id", "current"); // Activate the first tab
+            $("#content #tab1").fadeIn(); // Show first tab's content
+
+            $('#tabs a').click(function (e) {
+                e.preventDefault();
+                if ($(this).closest("li").attr("id") == "current") { //detection for current tab
+                    return;
+                }
+                else {
+                    $("#content").find("[id^='tab']").hide(); // Hide all content
+                    $("#tabs li").attr("id", ""); //Reset id's
+                    $(this).parent().attr("id", "current"); // Activate this
+                    $('#' + $(this).attr('name')).fadeIn(); // Show content for the current tab
+                }
+            });
+
+
+            setTimeout("slideNews()", 5000);
+        });
+
+        function slideNews() {
+
+            var pnlwidth;
+            pnlwidth = "278px"
+
+            var imgSrc;
+            imgSrc = $("#imgNews").attr('src');
+
+            if (imgSrc.indexOf('-close') != -1) {
+                setTimeout("slowTimeToggle()", 200)
+                $("#divCaptionNewsEvents").show();
+                $(".home_slider_topimage_container").css("margin-top", "65px");
+                $("#pnlAnnouncements").animate({
+                    width: "0"
+                });                
+            } else {
+                $("#imgNews").attr('src', imgSrc.replace("-open", "-close"));
+                $(".home_slider_topimage_container").css("margin-top", "200px");
+                $("#divCaptionNewsEvents").hide();
+                
+                $("#divNewsBox").css("width", "318px");
+                $("#pnlAnnouncements").show().animate({
+                    width: pnlwidth
+
+                });
+                
+            }
+          
+        }
+
+        function slowTimeToggle() {
+            $("#imgNews").attr('src', $("#imgNews").attr('src').replace("-close", "-open"));
+            $("#divNewsBox").css("width", "40px");
+        }				
+	
+    </script>
+   
+<link href="App_Themes/Default/component.css" type="text/css" rel="stylesheet" /><link href="App_Themes/Default/DateMonthPicker/jquery-ui.css" type="text/css" rel="stylesheet" /><link href="App_Themes/Default/DateMonthPicker/MonthPicker.2.1.css" type="text/css" rel="stylesheet" /><link href="App_Themes/Default/Default.css" type="text/css" rel="stylesheet" /><link href="App_Themes/Default/flexslider.css" type="text/css" rel="stylesheet" /><link href="App_Themes/Default/fonts.css" type="text/css" rel="stylesheet" /><link href="App_Themes/Default/Footer.css" type="text/css" rel="stylesheet" /><link href="App_Themes/Default/Menu.css" type="text/css" rel="stylesheet" /><link href="App_Themes/Default/slick.css" type="text/css" rel="stylesheet" /><link href="App_Themes/Default/slick-theme.css" type="text/css" rel="stylesheet" /><link href="App_Themes/Default/styleCustom.css" type="text/css" rel="stylesheet" /><link href="App_Themes/Default/VU.css" type="text/css" rel="stylesheet" /></head>
+<body style="overflow-x:hidden !important">
+    <form name="form1" method="post" action="default.aspx" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" />
+<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
+        <div style="position: absolute; z-index: 10; width: 100%">
+            <header>
+    	
+         
+<meta name="google-translate-customization" content="3280487709591956-dc3fc45d489f056a-g5378ebab0cbcd0a4-12"/>
+
+
+<div id="ucTopBar_divResponsiveMode">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+</div>
+
+<header  class="header" id="header">
+<style title="text/css">
+input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:focus 
+
+{    
+    /*border: 1px solid #2258a2;*/
+    background-color: #2258a2;
+    background-image: none;
+    filter: none;      
+    margin-left:-52%;
+    /*margin-bottom:2px;
+    height:100%;*/ 
+    /*width:10%;*/
+    border-radius: 0px 20px 20px 0px;
+	-webkit-border-radius: 0px 20px 20px 0px;
+	-moz-border-radius: 0px 20px 20px 0px;
+	-o-border-radius: 0px 20px 20px 0px;
+}
+input.gsc-input, .gsc-input-box, .gsc-input-box-hover, .gsc-input-box-focus {
+    outline: none;
+	padding: 1px 1px;	
+	color: #202020;
+	background: #FFF;
+	border: none;
+	width: 100%;
+	line-height: 1em;
+	margin-right:0px;
+	border: 1px solid #2258a2;
+	border-radius: 20px 0px 0px 20px;
+	-webkit-border-radius: 20px 0px 0px 20px;
+	-moz-border-radius: 20px 0px 0px 20px;
+	-o-border-radius: 20px 0px 0px 20px;
+    }
+.cse .gsc-search-button input.gsc-search-button-v2,
+input.gsc-search-button-v2 {
+ 
+  height: 11px !important;
+  margin-top: 0px !important;
+}
+.goog-te-gadget-simple {border-radius:5px 5px 5px 5px;}
+.goog-te-gadget-simple a {text-decoration: none !important;}
+
+body {top: 0px !important; position: static !important; }
+.goog-te-banner-frame {display:none !important}
+
+</style>
+
+
+
+      
+  
+
+    <script>
+
+        //Google Analytics Code - Start
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-27570524-4', 'auto');
+        ga('send', 'pageview');
+        //Google Analytics Code - End
+
+
+        (function () {
+            var cx = '002967652935449813969:c0oouwidqv8';
+            var gcse = document.createElement('script');
+            gcse.type = 'text/javascript';
+            gcse.async = true;
+            gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+                '//cse.google.com/cse.js?cx=' + cx;
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(gcse, s);
+        })();
+    </script>
+
+    	 
+
+   
+    <div class="logo_menu_wrap" id="logo_menu_wrap">
+               <div class="left_container fullWidth" id="left_container">                   
+                 <div class="logo_container showOnlyinFullView hideOnlyinMobileView" id="logo_container">
+                     <a href="/Default.aspx">
+                         <img src="/App_Themes/Default/Images/menu-img/logo.png" class="logoVU" id="logoVU">
+                     </a>
+                 </div>
+                 <div class="logo_text_containers hideOnlyinipadView" id="logo_text_containers">
+                     <div class="logotext" id="logotext">
+                         Virtual University of Pakistan
+                     </div>
+                     <div class="FederalGovernment" id="FederalGovernment">
+                         Federal Government University
+                     </div>
+                 </div>
+                   <div class="Gov_logo showOnlyinFullView hideOnlyinMobileView" id="Gov_logo">
+                       <img src="/images/logo_govt_of_pakistan.png" class="logo_gov_pak" />
+                   </div>
+                 
+             </div>
+               <div class="right_container" id="right_container">                  
+                   <div id="ucTopBar_divSearch" class="search showOnlyinFullView hideOnlyinMobileView">
+                        <div class="search_box">
+                            <gcse:searchbox-only resultsurl="/search.aspx" "></gcse:searchbox-only>
+                        </div>
+                    </div>
+                   <div class="language hideOnlyinipadView" id="language">
+                       <div>
+                           
+                           
+                           <meta name="google-translate-customization" content="bc046075478efb7e-a15ff2a2d6a3d585-g1afdba391878be79-f"></meta>
+
+                           <div class="language_box" id="google_translate_element"></div>
+                           <script type="text/javascript">
+                               function googleTranslateElementInit() {
+                                   new google.translate.TranslateElement({ pageLanguage: '', includedLanguages: 'en,ur', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false, gaTrack: true, gaId: 'UA-451XXXXX-1' }, 'google_translate_element');
+                               }
+                           </script>
+                           <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                           
+
+                           <input type="hidden" name="cof" value="FORID:10" />
+                       </div>                       
+                   </div>
+                   <span id="ucTopBar_lblParent" class="HiddenField">Parent</span>
+                </div>
+          </div>
+	</header>
+
+
+
+     
+	</header>
+        </div>
+    <div class="clear">
+    </div>
+    <div class="header_buttons_right hideOnlyinMobileView showOnlyinFullView" id="divNewsBox" style="position:absolute; z-index:20; overflow:hidden;">
+        <div style="float: right;">
+            <div class="home_slider_topimage_container ">
+                <div id="divCaptionNewsEvents" style="margin-bottom: -2px; margin-right: -5px; z-index: 3; position: relative; float: right; display: none; overflow:hidden;">
+                    <img id="img1" onclick="slideNews()" style="border-bottom-left-radius: 0px; border-bottom: 0px;"
+                        class="topimage_borderColor slider_topimage" src="app_themes/Default/images/news_images.png" />
+                </div>
+                <img id="imgNews" onclick="slideNews()" class="topimage_borderColor slider_topimage"
+                    src="app_themes/Default/images/arrow-close.png" />
+            </div>
+
+            <div id="pnlAnnouncements" class="home_slider_top hideOnlyinMobileView showOnlyinFullView" style="overflow:hidden;">
+                <div class="home_slider_top_body">
+                    <ul id="tabs">
+                        <li><a href="#" name="tab1">News</a></li>
+                        <li><a href="#" name="tab2">Events</a></li>
+                    </ul>
+                    <div id="content" class="topimage_borderColor">
+                        <div id="tab1">
+                            <div id="news">
+	
+                                <div class="home_slider_top_viewalllinks">
+                                    <a class="viewAllLink" href="/News/NewsList.aspx">View All News</a>
+                                </div>
+                                <div>
+		<table cellspacing="0" border="0" id="gvNews" width="100%">
+			<tr>
+				<td align="left" valign="top" width="30">
+                                                <span class="tab-heading">
+                                                    
+                                                    
+                                                    <a href='/NewsDetails.aspx?type=&NewsId=8833'>
+                                                    'Spring 2023 Final Term Examina...' <img id="gvNews_ctl02_imgNewsTag" src="images/icon_new.gif" height="14" border="0" /> </a> </span>
+                                                <br />
+                                                <div class="tab-text">
+                                                    The web interface for making date sheet has been launched on the ....
+                                                    <span class="tab-date">
+                                                        Aug 02, 2023</span>
+                                                </div>
+                                                <hr class="blockdivider" />
+                                            </td>
+			</tr><tr>
+				<td align="left" valign="top" width="30">
+                                                <span class="tab-heading">
+                                                    
+                                                    
+                                                    <a href='/NewsDetails.aspx?type=&NewsId=8832'>
+                                                    'Registrations are open for FRE...' <img id="gvNews_ctl03_imgNewsTag" src="images/icon_new.gif" height="14" border="0" /> </a> </span>
+                                                <br />
+                                                <div class="tab-text">
+                                                    Level up your skills with FREE courses offered by the Professiona....
+                                                    <span class="tab-date">
+                                                        Aug 02, 2023</span>
+                                                </div>
+                                                <hr class="blockdivider" />
+                                            </td>
+			</tr><tr>
+				<td align="left" valign="top" width="30">
+                                                <span class="tab-heading">
+                                                    
+                                                    
+                                                    <a href='/NewsDetails.aspx?type=&NewsId=8831'>
+                                                    'Call For Business Ideas VUSSBC...' <img id="gvNews_ctl04_imgNewsTag" src="images/icon_new.gif" height="14" border="0" /> </a> </span>
+                                                <br />
+                                                <div class="tab-text">
+                                                    Call for Business Ideas Batch-VII
+
+Student Startup Business Cen....
+                                                    <span class="tab-date">
+                                                        Aug 01, 2023</span>
+                                                </div>
+                                                <hr class="blockdivider" />
+                                            </td>
+			</tr>
+		</table>
+	</div>
+                            
+</div>
+                        </div>
+                        <div id="tab2">
+                            <div id="pnlEvents">
+	
+                                <div class="home_slider_top_viewalllinks">
+                                    <a class="viewAllLink" href="/Events/EventsList.aspx">View All Events</a>
+                                </div>
+                                <div>
+		<table cellspacing="0" border="0" id="gvEvents" width="100%">
+			<tr class="error">
+				<td><font color="White">No Event found</font></td>
+			</tr>
+		</table>
+	</div>
+                            
+</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <div id="maincontainerHeight" style="float: left; width: 100%;">
+            <!--slider-->
+
+            <div id="main-slider" class="main-slider flexslider">
+                <ul class="slides">
+                    
+                            <li>
+                                <a  title='' target='_self'  href='https://www.vu.edu.pk/Apply/Login.aspx' >
+                                    <img src='images/home/Sliders/WhatsApp Image 2023-06-22 at 15.46.55(2).jpg' alt="" />
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a  title='' target='_self'  href='https://www.vu.edu.pk/netacad/' >
+                                    <img src='images/home/Sliders/vu_web-header_pdc_free_aug-23 (1).jpg' alt="" />
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a  title='' target='_self'  href='https://www.vu.edu.pk/NewsDetails.aspx?type=&NewsId=8814' >
+                                    <img src='images/home/Sliders/vu_header_oric_stem_nat_conf.jpg' alt="" />
+                                </a>
+                            </li>
+                        
+                </ul>
+            </div>
+
+            
+
+
+            <div class="clear">
+            </div>
+            <!--menu-->
+            <link id="ucMenu_cssStyle" rel="stylesheet" type="text/css"></link>
+ <div class="Menucon">
+    <nav id='cssmenu'>
+        <div id="head-mobile">
+            <div class="mainContainer">
+                 <div class="LogoMobileView">
+                    <a href="/Default.aspx">
+                        <img src="../App_Themes/Default/Images/menu-img/logo.png" style="width:52px;">
+                    </a>
+                </div>
+                 <div class="GovlogoMobileView">                    
+                       <img src="../images/logo_govt_of_pakistan.png" style="width:37px;" />                    
+                </div>
+                <div class="NewsEventsMobileView">
+                    <a href="/news/NewsList.aspx">
+                        <img src="../App_Themes/Default/Images/news_images_mobileview.png">
+                    </a>
+                </div>
+
+                <div id="ucMenu_divSearchIconMobileView" class=" divSearchIconMobileView">
+                    <img src="../images/SearchIconMobileView.png" style="float:right;">
+                </div>
+
+                 <div id="ucMenu_divSearchBarMobileView" class="divSearchBarMobileView">
+                    <div class="search_box">
+                        <gcse:searchbox-only resultsurl="/search.aspx" "></gcse:searchbox-only>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="menubutton"></div>
+        <ul>
+            <li class="menuli" id="About">
+
+                <div class="menuIcons">
+                    <img src="/app_themes/Default/images/menu-img/logo_small.png" height="24" width="39">
+                </div>
+                <a id="divAbout" href='javascript:void(0);' class="menuMainHeading">
+                    About
+                </a>
+                <ul>
+                    <li><a href="/AboutUs/ChancellorMessage.aspx">Chancellor's Message</a> </li>
+                    
+                    <li><a href="/AboutUs/VisionAndMission.aspx">Vision and Mission</a></li>
+                    <li><a href="/AboutUs/AboutVU.aspx">Introduction</a></li>
+                    <li><a href="/AboutUs/Organization.aspx">Organizational Structure</a></li>
+                    <li><a href="/AboutUs/Bog.aspx">Board Of Governors</a></li>
+                    <li><a href="/pages/HowVuWorks.aspx">Mode of Education</a></li>
+                    <li><a href="/AboutUs/Faculty.aspx">Faculty Members</a></li>
+					<li><a href="/AboutUs/AdjunctFaculty.aspx">Adjunct Faculty Members</a></li>
+                    <li><a href="/AboutUs/Milestones.aspx">Milestones</a></li>
+                    <li><a href="/AboutUs/MOUsCollaboration.aspx">MOU's and Collaboration</a></li>
+                    
+                </ul>
+            </li>
+
+            <li class="menuli" id="Admissions">
+                <div class="menuIcons ">
+                    <img src="/app_themes/Default/images/menu-img/ico_Admission_small.png" height="24" width="33">
+                </div>
+                <a id="divAdmission" href='javascript:void(0);' class="menuMainHeading ">Admissions</a>
+                <ul>
+                    <li><a href="/Apply/eLearningQuestionnaire.aspx">Is VUP eLearning suitable for me?</a></li>
+                    <li><a href="/Admissions/AdmissionProcedure.aspx">Admission Schedule</a></li>
+                    <!--<li><a href="/Apply/AdmissionEligibility.aspx">Check Admission Eligibility</a></li>-->
+                    <li><a href="/FeeStructure.aspx">Fee Structure</a></li>
+                    <li><a href="/Fee/FeeCalculator.aspx">Fee Calculator</a></li>
+                    <li><a href="/prospectus/default.aspx" class="highlightmenuitem">Prospectus</a></li>
+                    <li><a href="/RecentAdvertisement/Default.aspx">Recent Advertisements</a></li>
+                    <li><a href="/Apply/Admissions.aspx" class="highlightmenuitem">How to Apply?</a></li>
+                    <li><a href="/Apply/Login.aspx" class="highlightmenuitem">Apply Online</a></li>                    
+                    <li><a href="/Admissions/TransferStudents.aspx">Admission Through Course Exemption</a></li>
+                    <li><a href="/Admissions/AdmissionThroughBSEntryRoute.aspx">Admission Through Entry Option</a></li>
+                    <li><a href="/pages/AdmissionForeign.aspx">Admission Foreign National</a></li>
+                    <li><a href="/apply/admitlist.aspx" class="highlightmenuitem">Admitted Candidates List</a></li>
+                    <li><a href="/pages/VUGradingScheme.aspx">VU Grading Scheme</a></li>
+                    <li><a href="/AcademicPrograms/CoursesCatalogue.aspx">Courses Catalogue</a></li>
+		    <li><a href="/StudyScheme">Study Scheme</a></li> 
+                    
+                </ul>
+            </li>
+
+            <li class="menuli" id="Faculties">
+                <div class="menuIcons ">
+                    <img src="/app_themes/Default/images/menu-img/ico_Faculties_small.png" height="24" width="23">
+                </div>
+                <a id="divFaculties" href='javascript:void(0);' class="menuMainHeading ">Faculties</a>
+                <ul>
+                    <li><a href="/pages/FacultyofArts.aspx">Faculty of Arts</a></li>
+                    <li><a href="/pages/FacultyofCS_IT.aspx">Faculty of CS & IT</a></li>
+                    <li><a href="/pages/FacultyofEducation.aspx">Faculty of Education</a></li>
+                    <li><a href="/pages/FacultyofManagement.aspx">Faculty of Management</a></li>
+                    <li><a href="/pages/FacultyofScience_Technology.aspx">Faculty of Science & Technology</a></li>
+                    <li><a href="/AcademicPrograms/CertificateCourses.aspx">Certificate Courses</a></li>
+                    <li><a href="/pages/ZeroSemester.aspx">Zero Semester</a></li>
+                    <li><a href="/pages/AdditionalSpecialization.aspx">Specialization Certificate</a></li>
+		     	
+		     <li style="height:34px;" ><a href='javascript:void(0);' class="subMenuHeading">Professional Courses</a>
+		     <ul>
+                         <li ><a href="/pages/intro_AI.aspx">Aritificial Intelligence Course</a></li>
+			<li><a href="/netacad">VU Cisco Network Courses</a></li>		
+                        
+                     </ul>
+                    </li>
+		    <li><a href="/pages/AllPrograms.aspx" class="highlightmenuitem">All Academic Programs</a></li>
+                    
+                </ul>
+            </li>
+
+            <li class="menuli" id="Students">
+                <div class="menuIcons ">
+                    <img src="/app_themes/Default/images/menu-img/ico_current_std_small.png" height="24" width="43">
+                </div>
+                <a id="divStudents" href='javascript:void(0);' class="menuMainHeading ">Students</a>
+            <ul>
+
+                
+                <li><a href="/Orientation/VUOrientation.aspx">How to study at VU</a></li>
+                
+                
+
+                <li><a href="/StudentServices/AcademicCalendar.aspx">Academic Calendar</a></li>
+                <li><a href="/studentservices/LectureSchedule.aspx">Lecture Schedule </a></li>
+                <li><a href="http://vulms.vu.edu.pk/" target="_blank" class="highlightmenuitem">LMS Login</a></li>
+                <li><a href="http://handbook.vu.edu.pk" target="_blank">Student Handbook </a></li>
+                <li><a href="http://gmail.vu.edu.pk/" target="_blank">VU Email</a></li>
+                <li><a href="http://bookshop.vu.edu.pk/" target="_blank">Bookshop</a></li>
+                
+                <li><a href="http://societies.vu.edu.pk" target="_blank">Life at VU</a></li>
+                 <li><a href='javascript:void(0);' class="subMenuHeading">Scholarships</a>
+                     <ul>
+                         <li><a href="/pages/VUScholarships.aspx">VU Scholarships</a></li>
+                         <li><a href="https://www.educator.com/scholarship">Educator Scholarships</a></li>
+                         <li><a href="/pages/Bait-ul-Mal-stipend.aspx">Pakistan Bait-ul-Mall Stipends</a></li>
+                         <li><a href="/Scholarships/Scholarships.aspx">NBP Student Loan Scheme</a></li>
+                         <li><a href="/pages/SyedaMubarikBegumScholarships.aspx">Syeda Mubarik Begum</a></li>
+                         <li><a href="/pages/PunjabWorkders.aspx">Punjab Workers Welfare Board</a></li>
+                         <li><a href="/pages/PEEF.aspx">Punjab Educational Endowment Fund</a></li>
+                     </ul>
+                 </li>
+            </ul>
+          </li>
+
+            <li class="menuli" id="VirtualCampuses">
+                <div class="menuIcons ">
+                    <img src="/app_themes/Default/images/menu-img/ico_campuses_small.png" height="24" width="33">
+                </div>
+                <a id="divVirtualCampuses" href='javascript:void(0);' class="menuMainHeading ">Virtual Campuses</a>
+                <ul>
+                    <li><a href="/PVCs/Default.aspx">Virtual Campuses</a></li>
+                    <li><a href="/Pages/CampusOpportunityMain.aspx">Become a VU Campus</a></li>
+                    <li><a href="/pages/PVCRules.aspx">PVC Rules</a></li>
+                </ul>
+            </li>
+
+            <li class="menuli" id="Opportunities">
+                <div class="menuIcons ">
+                    <img src="/app_themes/Default/images/menu-img/ico-Opportunity_small.png" height="24" width="33">
+                </div>
+                <a id="divOpportunities" href='javascript:void(0);' class="menuMainHeading ">Opportunities</a>
+                <ul>
+                    <li><a href="/Opportunities/Jobs.aspx">Jobs</a></li>
+		    <li><a href="javascript:void(0);">Course Development</a>
+                 <ul>
+                         <li><a href="/Opportunities/CourseDevelopment.aspx">Academics</a></li>
+                     <li><a href="/Opportunities/CourseDevelopmentProfessional.aspx">Professional</a></li>
+                </ul>
+
+		    </li>	
+                    <li><a href="/Opportunities/Tenders.aspx">Tenders</a></li>
+                    <li><a href="/pages/VendorRegistration.aspx">Vendor Registration</a></li>
+                    <li><a target="_blank" href="http://qb.vu.edu.pk/public/ExaminerRegistration.aspx">Exam Superintendent Registration</a></li>
+                </ul>
+            </li>
+
+            <li class="menuli" id="ImportantLinks">
+                <div class="menuIcons ">
+                    <img src="/app_themes/Default/images/menu-img/ico_admissions_small.png" height="24" width="33">
+                </div>
+                <a id="divImportantLinks" href='javascript:void(0);' class="menuMainHeading ">Important Links</a>
+
+                <ul class="lastmenuitem">
+                   
+                    
+
+                                
+
+                                <li class=''>
+
+                                    <a  href='https://www.vu.edu.pk/pages/harassmentProtection.aspx'  target='_new'>Protection against Harrassment </a>
+
+                                     
+                                </li>
+                            
+
+                                
+
+                                <li class=''>
+
+                                    <a  href='https://www.vu.edu.pk/NewsDetails.aspx?type=&NewsId=3143'  target='_new'>Citizen Portal/VU Complaint Handling </a>
+
+                                     
+                                </li>
+                            
+
+                                
+
+                                <li class=''>
+
+                                    <a  href='https://www.vu.edu.pk/AboutUs/RTI.aspx'  target='_new'>Right of Access to Information </a>
+
+                                     
+                                </li>
+                            
+
+                                
+
+                                <li class=''>
+
+                                    <a  href='https://oric.vu.edu.pk/'  target='_new'>ORIC </a>
+
+                                     
+                                </li>
+                            
+
+                                
+
+                                <li class=''>
+
+                                    <a  href='http://www.vu.edu.pk/verify'  target='_New'>Degree/Transcript Verification </a>
+
+                                     
+                                </li>
+                            
+
+                                
+
+                                <li class=''>
+
+                                    <a  href='	https://www.digiskills.pk/'  target='_new'>DigiSkills </a>
+
+                                     
+                                </li>
+                            
+
+                                
+
+                                <li class=''>
+
+                                    <a  href='http://vspace.vu.edu.pk/'  target='_new'>VSpace@VU </a>
+
+                                     
+                                </li>
+                            
+
+                                
+
+                                <li class=''>
+
+                                    <a  href='http://qec.vu.edu.pk/'  target='_qec'>QEC </a>
+
+                                     
+                                </li>
+                            
+
+                                
+
+                                <li class=''>
+
+                                    <a  href='http://www.vu.edu.pk/PhotoGallery/Default.aspx'  target='_self'>Photo Gallery </a>
+
+                                     
+                                </li>
+                            
+
+                                
+
+                                <li class=''>
+
+                                    <a  href='http://ssbc.vu.edu.pk/'  target='_new'>Student Start-Up Business Center </a>
+
+                                     
+                                </li>
+                            
+
+                                
+
+                                <li class=''>
+
+                                    <a  href='http://alumni.vu.edu.pk/'  target='_vuAlumni'>Alumni </a>
+
+                                     
+                                </li>
+                            
+
+                                
+
+                                <li class=''>
+
+                                    <a  href='http://vu-bytes.vu.edu.pk/'  target='_bytes'>VU-Bytes  </a>
+
+                                     
+                                </li>
+                            
+
+                    
+                    
+                    <li><a class="highlightmenuitem" href="../PhotoGallery/ImportantLinks.aspx">More Links</a></li>
+                
+                   
+                     
+                    
+                    
+                </ul>
+
+            </li>
+        </ul>
+    </nav>
+
+</div>
+<span id="ucMenu_lblMsg"></span>
+<script type='text/javascript' src="/Scripts/Menu.js"></script>
+
+
+<script type='text/javascript'>
+    $(document).ready(function () {
+
+        
+        $(".divSearchIconMobileView").click(function () {
+
+            $('.divSearchIconMobileView').hide();            
+            $('.divSearchBarMobileView').show();
+
+       });
+   
+   
+    });
+</script>
+
+
+
+
+
+
+            <div class="clear">
+            </div>
+
+            <div style="width: 100%; float: left;">
+                <div id="cb_lifeatvu" class="content_box contentboxMargin">                   
+                        <div id="bl-slider" class="main-slider flexslider">
+                            <ul class="slides">
+                                
+                                        <li>
+                                            <a title='Learning Management System (LMS)' target='_blank'  href='https://vulms.vu.edu.pk'  >
+                                                <img src='images/home/Sliders/vulms-link-slider02.jpg' alt="slider Images" />
+                                                <span class="flex-caption">Learning Management System (LMS)</span>
+                                            </a>
+                                        </li>
+
+                                    
+                                        <li>
+                                            <a title='VU Open CourseWare (OCW)' target='_blank'  href='http://ocw.vu.edu.pk'  >
+                                                <img src='images/home/Sliders/OCW-new-Link_web02.jpg' alt="slider Images" />
+                                                <span class="flex-caption">VU Open CourseWare (OCW)</span>
+                                            </a>
+                                        </li>
+
+                                    
+                            </ul>
+
+                        </div>                   
+                </div>
+
+                <div id="cb_alumni" class="content_box">                    
+                        <div id ="bc-slider" class="main-slider flexslider">
+                            <ul class="slides">
+                                
+                                        <li>
+                                            <a title='Pakistan Citizen Portal / VU Complaint Handling' target='_self'  href='http://www.vu.edu.pk/NewsDetails.aspx?type=&NewsId=3111' >
+                                                <img src='images/home/Sliders/PMDC(2).jpg' alt="slider Images" />
+                                                <span class="flex-caption">Pakistan Citizen Portal / VU Complaint Handling</span>
+                                            </a>
+                                        </li>
+
+                                    
+                                        <li>
+                                            <a title='Protection Against Harassment Of Women At The Workplace' target='_self'  href='https://www.vu.edu.pk/pages/harassmentProtection.aspx' >
+                                                <img src='images/home/Sliders/pastedimage0.jpg' alt="slider Images" />
+                                                <span class="flex-caption">Protection Against Harassment Of Women At The Workplace</span>
+                                            </a>
+                                        </li>
+
+                                    
+                            </ul>
+                        </div>                   
+                </div>
+
+                <div id="cb_news" class="content_box">                    
+                        <div id="br-slider" class="main-slider flexslider">
+                            <ul class="slides">
+                                
+                                        <li>
+
+                                            <a title='The Historic Moment!' target='_self'  href='https://photos.google.com/share/AF1QipNdMBA6NTdEjdfYZY1cQz3SdFU5vtX1cvj0AcyiDBRwA4iVa8euzEEIxHh_CmV6NA?key=bThIUjRkWXUyd05iWTFvRDh3Z1hodkI0b3l6Tkh3' >
+                                                <img src='images/home/Sliders/Arif Alvi.jpg' alt="slider Images" />
+                                                <span class="flex-caption">The Historic Moment!</span>
+                                            </a>
+                                        </li>
+                                    
+                                        <li>
+
+                                            <a title='VUP conducted it's 12th Convocation at Karachi' target='_self'  href='https://www.vu.edu.pk/NewsDetails.aspx?type=&NewsId=7752' >
+                                                <img src='images/home/Sliders/convocation karachi.jpg' alt="slider Images" />
+                                                <span class="flex-caption">VUP conducted it's 12th Convocation at Karachi</span>
+                                            </a>
+                                        </li>
+                                    
+
+                            </ul>
+                        </div>                   
+                </div>
+
+
+              
+            </div>
+        </div>
+    <div class="clear">
+    </div>
+
+
+        
+    <div><div><div>
+    <!--footer-->
+    
+
+</div>
+</div>
+</div>
+<script type="text/javascript" language="javascript">
+
+    function pageHeight() { return window.innerHeight != null ? window.innerHeight : document.documentElement && document.documentElement.clientHeight ? document.documentElement.clientHeight : document.body != null ? document.body.clientHeight : null; }
+    function ResetMinHeight() {
+        //var minHeight = pageHeight() - 343;
+        var bodyDiv, minHeight;
+
+        minHeight = pageHeight();
+        
+        bodyDiv = document.getElementById("divBodyContent");
+        //alert(bodyDiv);
+        if (bodyDiv != null) {           
+            minHeight = minHeight - 294;
+            bodyDiv.style.minHeight = minHeight.toString() + 'px';
+        }
+       
+    }
+
+    ResetMinHeight();
+    
+
+    
+</script>
+
+  <!-- To Verify PTCL-Cloud Machine & HEC_cloud MAchine 8/6/2017--->
+
+
+
+<div class="footer" id="footer_container">
+        
+            <div class="imp-vu-links vuHomeFooter" id="vu_container">
+                <div class="contact-data">
+                    <p>
+                        Virtual University of Pakistan
+                    </p>
+                </div>
+                 <div class="footer-info-data">
+                    
+                   
+                    
+                        <div class="imp_vu_img">
+                            <img src="/app_themes/Default/images/address.png" />
+                        </div>
+
+                        <p style="width:200px;" >
+                            M.A Jinnah Campus, Defence Road, 
+                            <br /> Off Raiwind Road, Lahore
+                        </p>
+                   
+                                     
+                </div>
+
+
+                
+            </div>
+            <div class="contact-us contactHomeFooter" id="contact_container">
+                <div class="contact-us-container" style="margin: 0 auto;">
+                <div id="footer_homelink" class="footer_links">
+                    <a href="/Default.aspx"><img src="/app_themes/Default/images/home.png" /></a>
+                    <br />
+                    Home
+                </div>
+
+                <div id="dummyHomeLink" class="footer_links" style="display:none;" >
+                 
+                </div>
+
+                <div class="footer_links">
+                    <a href="/SiteMap.aspx"><img src="/app_themes/Default/images/sitemap.png" /></a>
+                    <br />
+                    Sitemap
+                </div>
+                <div class="footer_links">
+                    <a href="/FAQs/FAQs.aspx"><img src="/app_themes/Default/images/FAQ.png" /></a>
+                    <br />
+                    FAQ
+                </div>
+                <div class="footer_links">
+                    <a href="/services.aspx"><img src="/app_themes/Default/images/contact.png" /></a>
+                    <br />
+                    Contact Us
+                </div>
+
+                </div>
+              
+               
+            </div>
+            <div class="help-us helpHomeFooter" id="help_container">
+                <div class="footer-info-data">
+                    <p>
+                        <img src="/app_themes/Default/images/fone.png" />
+                        0800-880-88 (Toll Free)
+                    </p>
+                    <p>     
+                        <img src="/app_themes/Default/images/phone.png" />
+                         +92-42-111-880-880,
+                         0304-111-0880</p>
+                   
+                     <p> 
+                        <img src="/app_themes/Default/images/fax.png" />
+                         +92-42-99200604, 99202174
+                    </p>                    
+                </div>
+                <div class="social-media">
+                    <a href="https://www.facebook.com/VirtualUniversityOfPakistan" target="_blank">
+                        <img src="/app_themes/Default/images/fb.png" alt="" />
+                    </a>
+                    <br />
+                    <a href="https://twitter.com/VUPakistan" target="_blank">
+                        <img src="/app_themes/Default/images/twitter.png" alt="" />
+                    </a>
+                    <!--<a href="https://www.plus.google.com/‎" target="_blank">
+                        <img src="/app_themes/Default/images/gmail.png" alt="" />
+                    </a>
+                    <a href="http://instagram.com/" target="_blank">
+                        <img src="/app_themes/Default/images/in.png" alt="" />
+                    </a>-->
+                </div>
+                
+                <!--<div class="footer-info-data">
+                    <br />
+                    <p>
+                        (c) Virtual University of Pakistan
+                    </p>
+                </div>-->
+            </div>
+            <div id="divCopyRight" class="copy-right-div">                                                   
+                   © 2015 Virtual University of Pakistan. 
+
+              </div>
+
+       
+    </div>
+
+
+
+
+
+
+    <div id="footerExtender" class="footer" style="margin-top: 0px; border: 0px solid blue;">
+        &nbsp;
+    </div>
+    <div class="footerbg copy-right-div">
+        © 2015 Virtual University of Pakistan.
+    </div>
+    
+    </form>
+    <script type="text/javascript" src="App_Themes/Default/plugins/flexslider/jquery.flexslider-min.js"></script>
+    <script type="text/javascript" src="App_Themes/Default/plugins/flexslider/flexslider.config.js"></script>
+
+    <script type="text/javascript" language="javascript">
+     
+        function ResizeFooterHeight() {
+            var footerextensionHeight;
+            var maincontainerHeight = document.getElementById('maincontainerHeight').clientHeight;
+            var footer_containerHeight = document.getElementById('footer_container').clientHeight;          
+            var totalContentHeight = footer_containerHeight + maincontainerHeight;                     
+            if (pageHeight() > totalContentHeight) {
+                footerextensionHeight = pageHeight() - totalContentHeight - 30;
+                document.getElementById('footerExtender').style.display = "block";
+                document.body.style.overflow = 'hidden';
+            }           
+            else {
+                footerextensionHeight = 0;
+                document.getElementById('footerExtender').style.display = "none";
+                document.body.style.overflowY = 'scroll';
+                document.body.style.overflowX = 'hidden';
+            }
+            document.getElementById('footerExtender').style.height = footerextensionHeight + "px";
+            document.getElementById('divCopyRight').style.display = "none";
+        }
+       
+        document.getElementById('footer_homelink').style.display = "none";
+        document.getElementById('dummyHomeLink').style.display = "block";
+      
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-1013982492"></script>
+        'https://connect.facebook.net/en_US/fbevents.js');
+            src="https://www.facebook.com/tr?id=782031012916059&ev=PageView&noscript=1" />
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+                                <a  title='' target='_self'  href='https://www.vu.edu.pk/Apply/Login.aspx' >
+                                <a  title='' target='_self'  href='https://www.vu.edu.pk/netacad/' >
+                                <a  title='' target='_self'  href='https://www.vu.edu.pk/NewsDetails.aspx?type=&NewsId=8814' >
+                <li><a href="http://vulms.vu.edu.pk/" target="_blank" class="highlightmenuitem">LMS Login</a></li>
+                <li><a href="http://handbook.vu.edu.pk" target="_blank">Student Handbook </a></li>
+                <li><a href="http://gmail.vu.edu.pk/" target="_blank">VU Email</a></li>
+                <li><a href="http://bookshop.vu.edu.pk/" target="_blank">Bookshop</a></li>
+                <li><a href="http://societies.vu.edu.pk" target="_blank">Life at VU</a></li>
+                         <li><a href="https://www.educator.com/scholarship">Educator Scholarships</a></li>
+                    <li><a target="_blank" href="http://qb.vu.edu.pk/public/ExaminerRegistration.aspx">Exam Superintendent Registration</a></li>
+                                    <a  href='https://www.vu.edu.pk/pages/harassmentProtection.aspx'  target='_new'>Protection against Harrassment </a>
+                                    <a  href='https://www.vu.edu.pk/NewsDetails.aspx?type=&NewsId=3143'  target='_new'>Citizen Portal/VU Complaint Handling </a>
+                                    <a  href='https://www.vu.edu.pk/AboutUs/RTI.aspx'  target='_new'>Right of Access to Information </a>
+                                    <a  href='https://oric.vu.edu.pk/'  target='_new'>ORIC </a>
+                                    <a  href='http://www.vu.edu.pk/verify'  target='_New'>Degree/Transcript Verification </a>
+                                    <a  href='	https://www.digiskills.pk/'  target='_new'>DigiSkills </a>
+                                    <a  href='http://vspace.vu.edu.pk/'  target='_new'>VSpace@VU </a>
+                                    <a  href='http://qec.vu.edu.pk/'  target='_qec'>QEC </a>
+                                    <a  href='http://www.vu.edu.pk/PhotoGallery/Default.aspx'  target='_self'>Photo Gallery </a>
+                                    <a  href='http://ssbc.vu.edu.pk/'  target='_new'>Student Start-Up Business Center </a>
+                                    <a  href='http://alumni.vu.edu.pk/'  target='_vuAlumni'>Alumni </a>
+                                    <a  href='http://vu-bytes.vu.edu.pk/'  target='_bytes'>VU-Bytes  </a>
+                                            <a title='Learning Management System (LMS)' target='_blank'  href='https://vulms.vu.edu.pk'  >
+                                            <a title='VU Open CourseWare (OCW)' target='_blank'  href='http://ocw.vu.edu.pk'  >
+                                            <a title='Pakistan Citizen Portal / VU Complaint Handling' target='_self'  href='http://www.vu.edu.pk/NewsDetails.aspx?type=&NewsId=3111' >
+                                            <a title='Protection Against Harassment Of Women At The Workplace' target='_self'  href='https://www.vu.edu.pk/pages/harassmentProtection.aspx' >
+                                            <a title='The Historic Moment!' target='_self'  href='https://photos.google.com/share/AF1QipNdMBA6NTdEjdfYZY1cQz3SdFU5vtX1cvj0AcyiDBRwA4iVa8euzEEIxHh_CmV6NA?key=bThIUjRkWXUyd05iWTFvRDh3Z1hodkI0b3l6Tkh3' >
+                                            <a title='VUP conducted it's 12th Convocation at Karachi' target='_self'  href='https://www.vu.edu.pk/NewsDetails.aspx?type=&NewsId=7752' >
+                    <a href="https://www.facebook.com/VirtualUniversityOfPakistan" target="_blank">
+                    <a href="https://twitter.com/VUPakistan" target="_blank">
+                    <!--<a href="https://www.plus.google.com/‎" target="_blank">
+                    <a href="http://instagram.com/" target="_blank">
