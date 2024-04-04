@@ -138,10 +138,6 @@ def displayVec (vectorToImage):
     plt.show()
     plt.close()
 
-
-
-
-
 def toList(arr, n):
 
     temp = []
