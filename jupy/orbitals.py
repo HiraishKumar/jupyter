@@ -118,9 +118,6 @@ def general_potential_3d(matrixWell3D, N, Elevels):
     Hamiltonian = diags(diagsV, diagsK, format = 'dia')
     
     print('Hamiltonian done')
-
-
-    ################################################################################
     
     #Hamiltonian.tocsr()
     e_values, e_vec = eigs(Hamiltonian, k = Elevels )
