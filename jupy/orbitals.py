@@ -119,7 +119,6 @@ def general_potential_3d(matrixWell3D, N, Elevels):
     
     print('Hamiltonian done')
     
-    #Hamiltonian.tocsr()
     e_values, e_vec = eigs(Hamiltonian, k = Elevels )
 
     print('All Hamiltonian done')
