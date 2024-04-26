@@ -114,9 +114,7 @@ def general_potential_3d(matrixWell3D, N, Elevels):
 
     diagsK = [-N*N, -N, -1, 0, 1, N, N*N]
     diagsV = [diagmNN, diagmN, diagm1, diag0, diagp1, diagpN, diagpNN]
-
-    Hamiltonian = diags(diagsV, diagsK, format = 'dia')
-    
+    Hamiltonian = diags(diagsV, diagsK, format = 'dia')    
     print('Hamiltonian done')
     e_values, e_vec = eigs(Hamiltonian, k = Elevels )
     print('All Hamiltonian done')
